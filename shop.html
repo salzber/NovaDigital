@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Printers | NovaDigital | Digital Marketing Services & Online Growth</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0C71C3',
+                            purple: '#8624E1',
+                            darkPurple: '#3607A6',
+                            pink: '#f92c8b',
+                            lightPurple: '#b02cd6',
+                            text: '#666666',
+                            yellow: '#fcd600',
+                            green: '#1d770d'
+                        }
+                    },
+                    boxShadow: {
+                        'btn': '0px 20px 30px -10px rgba(12, 113, 195, 0.4)',
+                        'card': '0px 2px 20px 0px rgba(0,0,0,0.05)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-brand-text bg-white overflow-x-hidden">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-3xl font-heading font-bold text-gray-900 tracking-tighter">
+                        Nova<span class="text-brand-blue">Digital</span>
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 font-medium hover:text-brand-blue transition">Home</a>
+                    <a href="about.html" class="text-gray-600 font-medium hover:text-brand-blue transition">About Us</a>
+                    <div class="relative group">
+                        <a href="services.html"
+                            class="text-gray-600 font-medium hover:text-brand-blue transition flex items-center">
+                            Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-white border border-gray-100 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="services.html"
+                                class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50 border-b border-gray-50">Performance
+                                Marketing</a>
+                            <a href="services.html"
+                                class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50 border-b border-gray-50">SEO</a>
+                            <a href="services.html"
+                                class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50 border-b border-gray-50">Website
+                                Development</a>
+                            <a href="services.html"
+                                class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50">Google
+                                Ads</a>
+                        </div>
+                    </div>
+                    <a href="shop.html" class="text-brand-blue font-semibold transition">Shop</a>
+                    <a href="contact.html"
+                        class="text-gray-600 font-medium hover:text-brand-blue transition">Contact</a>
+                </nav>
+
+                <div class="hidden md:flex items-center space-x-4">
+                    <button onclick="toggleCart()"
+                        class="relative text-gray-600 hover:text-brand-blue text-xl p-2 transition">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count-badge"
+                            class="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center hidden">0</span>
+                    </button>
+                    <a href="contact.html"
+                        class="bg-brand-blue text-white px-6 py-2.5 rounded-full font-heading font-semibold hover:bg-blue-700 transition duration-300">
+                        Need Help? <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center space-x-4">
+                    <button onclick="toggleCart()" class="relative text-gray-600 text-xl">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count-badge-mobile"
+                            class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center hidden">0</span>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full z-50">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 font-medium text-gray-600 border-b border-gray-100">Home</a>
+                <a href="about.html" class="block px-3 py-3 font-medium text-gray-600 border-b border-gray-100">About
+                    Us</a>
+                <a href="services.html"
+                    class="block px-3 py-3 font-medium text-gray-600 border-b border-gray-100">Services</a>
+                <a href="shop.html"
+                    class="block px-3 py-3 font-semibold text-brand-blue border-b border-gray-100">Shop</a>
+                <a href="contact.html" class="block px-3 py-3 font-medium text-gray-600">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="cart-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden transition-opacity"
+        onclick="toggleCart()"></div>
+    <div id="cart-sidebar"
+        class="fixed top-0 right-0 h-full w-full sm:w-96 bg-white shadow-2xl z-[70] transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+            <h2 class="text-xl font-heading font-bold text-gray-900">Your Cart</h2>
+            <button onclick="toggleCart()" class="text-gray-500 hover:text-red-500 text-xl transition"><i
+                    class="fas fa-times"></i></button>
+        </div>
+        <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4">
+            <div class="text-center text-gray-400 mt-10">
+                <i class="fas fa-shopping-basket text-4xl mb-3"></i>
+                <p>Your cart is empty.</p>
+            </div>
+        </div>
+        <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-gray-600 font-medium">Subtotal</span>
+                <span id="cart-subtotal" class="text-xl font-bold text-gray-900">₹0.00</span>
+            </div>
+            <button onclick="checkout()"
+                class="w-full bg-brand-green text-white font-bold py-3 rounded uppercase tracking-wider hover:bg-green-700 transition shadow-lg">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- <section class="w-full">
+        <img src="https://www.inspiringmeme.com/wp-content/uploads/2018/07/hp-printer-support-services.png"
+            alt="Shop Banner" class="w-full h-auto object-cover">
+    </section> -->
+
+    <section class="bg-gradient-to-r from-brand-blue to-blue-900 py-8 border-b-4 border-brand-yellow relative overflow-hidden mb-10">
+        <i class="fas fa-print absolute -right-10 -top-5 text-white opacity-10 text-[150px]"></i>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl md:text-3xl font-heading font-bold text-white mb-2 tracking-wide">
+                    Confused about which printer to buy?
+                </h3>
+                <p class="text-blue-100 text-sm md:text-base font-medium">
+                    Talk to our experts for <span class="text-brand-yellow font-bold">corporate discounts</span>, bulk orders, and instant technical support!
+                </p>
+            </div>
+
+            <div class="shrink-0">
+                <a href="tel:+18888219218" 
+                   class="group relative flex items-center bg-brand-yellow text-black font-bold text-lg px-8 py-4 rounded-full shadow-[0_0_20px_rgba(252,214,0,0.3)] hover:bg-yellow-400 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                    
+                    <span class="absolute flex h-4 w-4 -top-1 -right-1">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-4 w-4 bg-red-600 border-2 border-white"></span>
+                    </span>
+                    
+                    <i class="fas fa-phone-volume mr-3 text-xl group-hover:rotate-12 transition-transform"></i> 
+                    +1 (888) 821-9218
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-16">
+
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-10 text-gray-600">
+            <p class="mb-4 sm:mb-0 text-sm font-medium">Showing all premium printers</p>
+            <form class="flex items-center">
+                <select name="orderby"
+                    class="bg-gray-100 border border-gray-200 text-sm rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent">
+                    <option value="popularity" selected="selected">Sort by popularity</option>
+                    <option value="rating">Sort by average rating</option>
+                    <option value="date">Sort by latest</option>
+                    <option value="price">Sort by price: low to high</option>
+                    <option value="price-desc">Sort by price: high to low</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="product-list">
+        </div>
+
+        <div class="mt-16 flex justify-center">
+            <nav class="inline-flex space-x-2">
+                <span
+                    class="w-10 h-10 flex items-center justify-center bg-brand-blue text-white font-medium rounded">1</span>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-gray-100 text-gray-600 font-medium rounded hover:bg-gray-200 transition">2</a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-gray-100 text-gray-600 font-medium rounded hover:bg-gray-200 transition"><i
+                        class="fas fa-arrow-right"></i></a>
+            </nav>
+        </div>
+
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 pb-16">
+        <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 text-gray-600 text-sm leading-relaxed">
+            <strong>Disclaimer:</strong> All products offered on our platform include genuine hardware and equipment
+            obtained directly from authorized partners and manufacturers. NovaDigital is an independent e-commerce
+            reseller and operates in full compliance with the FTC’s Mail, Internet, or Telephone Order Merchandise Rule
+            to protect consumer rights. These products are also available through the official websites of their
+            respective brands. For complete details on purchasing, refunds, and cancellations, please refer to the
+            relevant policy sections on our website.
+        </div>
+    </section>
+
+    <footer class="bg-[#262626] text-gray-300 pt-16 pb-8 border-t-[6px] border-brand-blue mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6 font-heading">How It Works</h3>
+                    <p class="text-sm leading-relaxed mb-4 text-justify">NovaDigital is an independent brand providing
+                        premium office equipment, printers, and hardware solutions along with performance-focused
+                        digital services. All trademarks and product names referenced on this website are the property
+                        of their respective owners and are used for identification purposes only. We operate as an
+                        independent authorized reseller and do not imply any endorsement or affiliation with any
+                        trademark owner.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6 font-heading">Our Policies</h3>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="privacy-policy.html" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-shield-alt w-6"></i> Privacy Policy</a></li>
+                        <li><a href="refund-policy.html" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-undo-alt w-6"></i> Refund Policy</a></li>
+                        <li><a href="terms-and-condition.html" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-file-contract w-6"></i> Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-exclamation-circle w-6"></i> Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6 font-heading">Quick Links</h3>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="contact.html" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-envelope w-6"></i> Contact Us</a></li>
+                        <li><a href="index.html#faq" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-question-circle w-6"></i> FAQ's</a></li>
+                        <li><a href="sitemap.xml" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-sitemap w-6"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6 font-heading">Contact</h3>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="tel:+18888219218" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-phone-alt w-6"></i> +1 (888) 821-9218</a></li>
+                        <li><a href="mailto:info@novadigital.com"
+                                class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-paper-plane w-6"></i> info@novadigital.com</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p>Copyright &copy; 2026 by novadigital.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Real Printer Product Data (Using dummyimage.com for 100% reliability) ---
+        const products = [
+            { id: 1, name: "Epson EcoTank L3250 All-in-One Ink Tank", oldPrice: 16849, price: 14999, image: "https://static1.industrybuying.com/products/it-electronics/printers/ink-tank-printers/ITE.INK.66593380_1668301815275.webp" },
+            { id: 2, name: "Epson EcoTank L3211 All-in-One", oldPrice: 14999, price: 11999, image: "https://mediaserver.goepson.com/adaptivemedia/rendition?id=94f6fafb79f477ac599e44c202f5b345d20779f3&vid=94f6fafb79f477ac599e44c202f5b345d20779f3&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=EKL_L3200_690_460_normal" },
+            { id: 3, name: "Canon Pixma G3770 WiFi Color Ink Tank", oldPrice: 19999, price: 17299, image: "https://static1.industrybuying.com/products/it-electronics/printers/inkjet-printers/OFF.PRI.18221622_1722323827984.webp" },
+            { id: 4, name: "Brother DCP-T535DW Auto Duplex", oldPrice: 18999, price: 16899, image: "https://static1.industrybuying.com/products/it-electronics/printers/ink-tank-printers/OFF.PRI.103167647_1668053764056.webp" },
+            { id: 5, name: "Brother DCP-L5660DN Auto Duplex Laser", oldPrice: 45000, price: 42199, image: "https://static1.industrybuying.com/products/it-electronics/printers/multifunction-printers/OFF.PRI.31554615_1667992042396.webp" },
+            { id: 6, name: "HP LaserJet Managed MFP E72625dn", oldPrice: 180000, price: 170999, image: "https://static1.industrybuying.com/products/it-electronics/printers/laser-printers/ITE.PRI.95947820_1668218119481.webp" },
+            { id: 7, name: "Brother MFC-T4500DW All-in-One Inktank", oldPrice: 75000, price: 71979, image: "https://static1.industrybuying.com/products/it-electronics/printers/ink-tank-printers/OFF.PRI.83167694_1668053767358.webp" },
+            { id: 8, name: "HP LaserJet Enterprise M507dn Monochrome", oldPrice: 75999, price: 71999, image: "https://static1.industrybuying.com/products/it-electronics/printers/multifunction-printers/ITE.LAS.86518415_1668291351195.webp" },
+            { id: 9, name: "HP LaserJet MFP M438nda Printer", oldPrice: 88000, price: 83000, image: "https://static1.industrybuying.com/products/it-security/printers/laser-printers/ITS.LAS.633367526_1748922278024.webp" },
+            { id: 10, name: "Canon imageRUNNER ADVANCE DX C5870i", oldPrice: null, price: 250000, image: "https://static1.industrybuying.com/products/it-electronics/printers/multifunction-printers/ITE.MUL.37775138_1673015579239.webp" },
+            { id: 11, name: "Xerox VersaLink C7100 Series", oldPrice: null, price: 145000, image: "https://static1.industrybuying.com/products/it-electronics/printers/multifunction-printers/OFF.PRI.84731267_1668134905287.webp" },
+            { id: 12, name: "HP Smart Tank 580 All-in-One", oldPrice: 15999, price: 13499, image: "https://static1.industrybuying.com/products/it-electronics/printers/ink-tank-printers/OFF.PRI.83167694_1668053767358.webp" },
+            { id: 13, name: "Epson WorkForce Enterprise WF-M21000", oldPrice: null, price: 320000, image: "https://static1.industrybuying.com/products/it-electronics/printers/ink-tank-printers/ITE.INK.76401568_1668277798561.webp" },
+            { id: 14, name: "Brother DCP-T426W Ink Tank", oldPrice: 12999, price: 10999, image: "https://static1.industrybuying.com/products/it-electronics/printers/laser-printers/ITE.PRI.95947820_1668218119481.webp" },
+            { id: 15, name: "HP DeskJet 2820 Compact Printer", oldPrice: 5999, price: 4499, image: "https://static1.industrybuying.com/products/it-electronics/printers/multifunction-printers/OFF.PRI.31554615_1667992042396.webp" },
+            { id: 16, name: "Canon PIXMA E477 Wireless", oldPrice: 6499, price: 5299, image: "https://static1.industrybuying.com/products/it-electronics/printers/inkjet-printers/ITE.INK.48664501_1703754989680.webp" }
+        ];
+
+        // --- Render Products ---
+        const productList = document.getElementById('product-list');
+
+        // Use Indian Rupee (₹) since prices are based on INR market values as per real data.
+        const formatPrice = (price) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(price);
+
+        products.forEach(p => {
+            const hasSale = p.oldPrice !== null;
+            const priceHtml = hasSale
+                ? `<del class="text-gray-400 mr-2">${formatPrice(p.oldPrice)}</del><ins class="text-brand-text font-bold no-underline">${formatPrice(p.price)}</ins>`
+                : `<span class="text-brand-text font-bold">${formatPrice(p.price)}</span>`;
+
+            const badgeHtml = hasSale
+                ? `<span class="absolute top-2 right-2 bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">Sale!</span>`
+                : '';
+
+            const card = document.createElement('div');
+            card.className = "group relative border border-gray-200 rounded-lg overflow-hidden hover:shadow-card transition duration-300 flex flex-col bg-white";
+            card.innerHTML = `
+                ${badgeHtml}
+                <div class="relative overflow-hidden cursor-pointer bg-gray-50 flex items-center justify-center border-b border-gray-100">
+                    <img src="${p.image}" alt="${p.name}" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500 rounded">
+                </div>
+                <div class="p-5 text-center flex-1 flex flex-col justify-between">
+                    <div>
+                        <h2 class="font-heading font-medium text-gray-800 text-[15px] mb-3 leading-snug">${p.name}</h2>
+                        <div class="text-[15px]">${priceHtml}</div>
+                    </div>
+                    <button onclick="addToCart(${p.id})" class="mt-5 w-full border border-brand-blue text-brand-blue font-medium py-2 rounded hover:bg-brand-blue hover:text-white transition duration-300">
+                        Add to cart
+                    </button>
+                </div>
+            `;
+            productList.appendChild(card);
+        });
+
+        // --- Shopping Cart Logic ---
+        let cart = [];
+
+        function toggleCart() {
+            const overlay = document.getElementById('cart-overlay');
+            const sidebar = document.getElementById('cart-sidebar');
+
+            if (sidebar.classList.contains('translate-x-full')) {
+                overlay.classList.remove('hidden');
+                setTimeout(() => sidebar.classList.remove('translate-x-full'), 10);
+            } else {
+                sidebar.classList.add('translate-x-full');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existingItem = cart.find(item => item.id === productId);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            updateCartUI();
+
+            // Open cart automatically when item is added
+            const sidebar = document.getElementById('cart-sidebar');
+            if (sidebar.classList.contains('translate-x-full')) {
+                toggleCart();
+            }
+        }
+
+        function updateQuantity(productId, delta) {
+            const item = cart.find(i => i.id === productId);
+            if (item) {
+                item.quantity += delta;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(i => i.id !== productId);
+                }
+                updateCartUI();
+            }
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cart-items-container');
+            const badges = [document.getElementById('cart-count-badge'), document.getElementById('cart-count-badge-mobile')];
+            const subtotalEl = document.getElementById('cart-subtotal');
+
+            let totalItems = 0;
+            let subtotal = 0;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center text-gray-400 mt-10">
+                        <i class="fas fa-shopping-basket text-4xl mb-3"></i>
+                        <p>Your cart is empty.</p>
+                    </div>`;
+            } else {
+                container.innerHTML = '';
+                cart.forEach(item => {
+                    totalItems += item.quantity;
+                    subtotal += item.price * item.quantity;
+
+                    const el = document.createElement('div');
+                    el.className = "flex items-center space-x-4 border-b border-gray-100 pb-4";
+                    el.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded border border-gray-200">
+                        <div class="flex-1">
+                            <h4 class="text-sm font-medium text-gray-800 line-clamp-2">${item.name}</h4>
+                            <div class="text-brand-blue font-bold text-sm mt-1">${formatPrice(item.price)}</div>
+                        </div>
+                        <div class="flex items-center border border-gray-200 rounded">
+                            <button onclick="updateQuantity(${item.id}, -1)" class="px-2 py-1 text-gray-500 hover:bg-gray-100">-</button>
+                            <span class="px-2 text-sm">${item.quantity}</span>
+                            <button onclick="updateQuantity(${item.id}, 1)" class="px-2 py-1 text-gray-500 hover:bg-gray-100">+</button>
+                        </div>
+                    `;
+                    container.appendChild(el);
+                });
+            }
+
+            badges.forEach(b => {
+                b.textContent = totalItems;
+                b.classList.toggle('hidden', totalItems === 0);
+            });
+            subtotalEl.textContent = formatPrice(subtotal);
+        }
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Your cart is empty!");
+                return;
+            }
+
+            // 1. User ko message show karein
+            alert("Thank you for your order! To complete your secure checkout, you will now be redirected to our support team via phone call.");
+
+            // 2. Phone dialer par redirect karein (yahan apna original number rakhein)
+            window.location.href = "tel:+18888219218";
+
+            // 3. Cart ko reset aur close karein
+            cart = [];
+            updateCartUI();
+            toggleCart();
+        }
+        // Initialize UI
+        updateCartUI();
+    </script>
+</body>
+
+</html>
