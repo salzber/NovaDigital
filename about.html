@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NovaDigital | Digital Marketing Services & Online Growth</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0C71C3',
+                            purple: '#8624E1',
+                            darkPurple: '#3607A6',
+                            pink: '#f92c8b',
+                            lightPurple: '#b02cd6',
+                            text: '#666666'
+                        }
+                    },
+                    boxShadow: {
+                        'btn': '0px 20px 30px -10px rgba(134,36,225,0.4)',
+                        'card': '0px 2px 70px 0px rgba(110,130,208,0.18)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-brand-text bg-white overflow-x-hidden">
+
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-3xl font-heading font-bold text-gray-900 tracking-tighter">
+                        Nova<span class="text-brand-blue">Digital</span>
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 font-medium hover:text-brand-blue transition">Home</a>
+                    <a href="about.html" class="text-gray-600 font-medium hover:text-brand-blue transition">About Us</a>
+
+                    <div class="relative group">
+                        <a href="services.html"
+                            class="text-gray-600 font-medium hover:text-brand-blue transition flex items-center">
+                            Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-white border border-gray-100 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="services.html"
+                                class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50 border-b border-gray-50">Performance
+                                Marketing</a>
+                            <a href="services.html"
+                                class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50 border-b border-gray-50">SEO</a>
+                            <a href="services.html"
+                                class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50 border-b border-gray-50">Website
+                                Development</a>
+                            <a href="services.html"
+                                class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50">Google
+                                Ads</a>
+                        </div>
+                    </div>
+
+                    <a href="shop.html" class="text-gray-600 font-medium hover:text-brand-blue transition">Shop</a>
+                    <a href="contact.html"
+                        class="text-gray-600 font-medium hover:text-brand-blue transition">Contact</a>
+                </nav>
+
+                <div class="hidden md:flex items-center">
+                    <a href="contact.html"
+                        class="bg-brand-blue text-white px-6 py-2.5 rounded-full font-heading font-semibold hover:bg-blue-700 transition duration-300">
+                        Need Help? <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full z-50">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 font-medium text-gray-600 border-b border-gray-100">Home</a>
+                <a href="about.html" class="block px-3 py-3 font-medium text-gray-600 border-b border-gray-100">About
+                    Us</a>
+                <a href="services.html"
+                    class="block px-3 py-3 font-medium text-gray-600 border-b border-gray-100">Services</a>
+                <a href="shop.html" class="block px-3 py-3 font-medium text-gray-600 border-b border-gray-100">Shop</a>
+                <a href="contact.html" class="block px-3 py-3 font-medium text-gray-600">Contact</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="bg-gray-900 pt-20 pb-20 md:pt-28 md:pb-28 text-center px-4 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay pointer-events-none"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-white text-4xl md:text-5xl font-heading font-bold mb-6">About Us</h1>
+            <p class="text-gray-300 text-lg md:text-xl leading-relaxed">
+                NovaDigital is offering cybersecurity solutions and performance-driven digital services. Through NovaDigital, we promote and sell antivirus and digital protection products, including solutions available under authorized reseller programs, while also providing digital marketing services such as SEO, PPC, and online growth strategies to help businesses improve visibility and performance.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="prose prose-lg text-gray-600 space-y-8 leading-relaxed">
+                <p>
+                    We are dedicated to helping businesses thrive in the fast-paced digital world. As a full-service digital marketing agency, we specialize in delivering comprehensive solutions, including SEO, PPC, social media marketing, website development, and performance-driven campaigns. Our mission is to provide strategies that not only enhance online visibility but also generate measurable results, driving growth and long-term success for our clients.
+                </p>
+                <p>
+                    We understand that every business is unique, with its own goals, target audience, and challenges. That’s why we focus on crafting <strong class="text-gray-900 font-semibold">customized marketing strategies</strong> that align with your objectives and industry requirements. Whether you are a startup aiming to establish a strong digital presence or an established brand looking to scale, our team works closely with you to design campaigns that maximize reach, engagement, and conversions.
+                </p>
+                <p>
+                    Innovation and adaptability are at the core of our approach. The digital landscape is constantly evolving, and staying ahead requires a combination of creativity, technology, and strategic thinking. Our experts leverage the latest tools and trends to optimize your campaigns, track performance, and deliver tangible results. From building SEO-friendly websites to managing high-performing Google Ads campaigns, we ensure that every action contributes to your business growth.
+                </p>
+                <p>
+                    Transparency and client satisfaction are fundamental to our ethos. We maintain clear communication throughout the process, providing detailed reports and insights so you can measure the success of your marketing investment. Our commitment goes beyond delivering services—we aim to build lasting partnerships, acting as a trusted advisor and growth partner for your business.
+                </p>
+                <p>
+                    At NovaDigital, we believe that success is measured by the results we help you achieve. Every click, lead, and conversion is a step toward achieving your business objectives. By combining <strong class="text-gray-900 font-semibold">data-driven strategies, innovative solutions, and a client-first approach</strong>, we empower businesses to not only compete but excel in the digital marketplace.
+                </p>
+                <p>
+                    Partner with us and experience how NovaDigital can transform your online presence, drive meaningful engagement, and take your business to the next level. Your growth is our passion, and your success is our mission.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t-[6px] border-brand-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6 font-heading">How It Works</h3>
+                    <p class="text-sm leading-relaxed mb-4 text-justify">NovaDigital is an independent brand providing
+                        genuine antivirus and digital protection solutions along with performance-focused digital
+                        services. All trademarks and product names referenced on this website are the property of their
+                        respective owners and are used for identification purposes only. We operate as an independent
+                        authorized reseller and do not imply any endorsement or affiliation with any trademark owner.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6 font-heading">Our Policies</h3>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="privacy-policy.html" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-shield-alt w-6"></i> Privacy Policy</a></li>
+                        <li><a href="refund-policy.html" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-undo-alt w-6"></i> Refund Policy</a></li>
+                        <li><a href="terms-and-condition.html" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-file-contract w-6"></i> Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-exclamation-circle w-6"></i> Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6 font-heading">Quick Links</h3>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="contact.html" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-envelope w-6"></i> Contact Us</a></li>
+                        <li><a href="index.html#faq" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-question-circle w-6"></i> FAQ's</a></li>
+                        <li><a href="sitemap.xml" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-sitemap w-6"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6 font-heading">Contact</h3>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="tel:+18888219218" class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-phone-alt w-6"></i> +1 (888) 821-9218</a></li>
+                        <li><a href="mailto:info@novadigital.com"
+                                class="hover:text-white transition flex items-center"><i
+                                    class="fas fa-paper-plane w-6"></i> info@novadigital.com</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p>Copyright &copy; 2026 by novadigital.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
