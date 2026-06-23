@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | NovaDigital | Digital Marketing Services & Online Growth</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0C71C3',
+                            purple: '#8624E1',
+                            darkPurple: '#3607A6',
+                            pink: '#f92c8b',
+                            lightPurple: '#b02cd6',
+                            text: '#666666'
+                        }
+                    },
+                    boxShadow: {
+                        'btn': '0px 20px 30px -10px rgba(134,36,225,0.4)',
+                        'card': '0px 2px 70px 0px rgba(110,130,208,0.18)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-brand-text bg-gray-50 overflow-x-hidden">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-3xl font-heading font-bold text-gray-900 tracking-tighter">
+                        Nova<span class="text-brand-blue">Digital</span>
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 font-medium hover:text-brand-blue transition">Home</a>
+                    <a href="#" class="text-gray-600 font-medium hover:text-brand-blue transition">About Us</a>
+                    
+                    <div class="relative group">
+                        <button class="text-gray-600 font-medium hover:text-brand-blue transition flex items-center">
+                            Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white border border-gray-100 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="#" class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50 border-b border-gray-50">Performance Marketing</a>
+                            <a href="#" class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50 border-b border-gray-50">SEO</a>
+                            <a href="#" class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50 border-b border-gray-50">Website Development</a>
+                            <a href="#" class="block px-4 py-3 text-sm text-gray-600 hover:text-brand-blue hover:bg-gray-50">Google Ads</a>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="text-gray-600 font-medium hover:text-brand-blue transition">Shop</a>
+                    <a href="contact.html" class="text-brand-blue font-semibold transition">Contact</a>
+                </nav>
+
+                <div class="hidden md:flex items-center">
+                    <a href="contact.html" class="bg-brand-blue text-white px-6 py-2.5 rounded-full font-heading font-semibold hover:bg-blue-700 transition duration-300">
+                        Need Help? <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full z-50">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 font-medium text-gray-600 border-b border-gray-100">Home</a>
+                <a href="#" class="block px-3 py-3 font-medium text-gray-600 border-b border-gray-100">About Us</a>
+                <a href="#" class="block px-3 py-3 font-medium text-gray-600 border-b border-gray-100">Services</a>
+                <a href="#" class="block px-3 py-3 font-medium text-gray-600 border-b border-gray-100">Shop</a>
+                <a href="contact.html" class="block px-3 py-3 font-semibold text-brand-blue">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-brand-blue pt-20 pb-28 md:pt-24 md:pb-36 text-center px-4">
+        <h1 class="text-white text-4xl md:text-5xl font-heading font-semibold mb-6">Contact</h1>
+        <p class="text-white/90 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+            Get in touch with NovaDigital, for digital marketing and cybersecurity products. We are available to answer your queries and discuss solutions tailored to your needs.
+        </p>
+    </section>
+
+    <section class="relative z-10 -mt-16 mb-20">
+        <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="bg-white rounded-xl shadow-card p-10 text-center transform hover:-translate-y-2 transition duration-300">
+                <div class="w-20 h-20 mx-auto bg-[#7a69e6]/20 text-[#7a69e6] rounded-full flex items-center justify-center text-3xl mb-6">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h4 class="font-bold text-xl text-gray-900 mb-4">Email</h4>
+                <p class="text-gray-600 text-lg">
+                    <a href="mailto:info@novadigital.com" class="hover:text-brand-blue transition">info@novadigital.com</a>
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-card p-10 text-center transform hover:-translate-y-2 transition duration-300">
+                <div class="w-20 h-20 mx-auto bg-[#fa5e5d]/20 text-[#fa5e5d] rounded-full flex items-center justify-center text-3xl mb-6">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h4 class="font-bold text-xl text-gray-900 mb-4">Phone</h4>
+                <p class="text-gray-600 text-lg">
+                    <a href="tel:+18889734608" class="hover:text-brand-blue transition">+1(888) 973-4608</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold font-heading text-gray-900 mb-4">Send a Message</h2>
+                <p class="text-gray-600 text-lg">Interested in driving growth? Have a general question? We’re just an email away.</p>
+            </div>
+
+            <form action="#" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <input type="text" placeholder="Name" required class="w-full bg-[#6e82d00a] text-gray-700 placeholder-gray-500 border-b-[3px] border-gray-300 focus:border-brand-blue px-5 py-4 rounded focus:outline-none transition">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email Address" required class="w-full bg-[#6e82d00a] text-gray-700 placeholder-gray-500 border-b-[3px] border-gray-300 focus:border-brand-blue px-5 py-4 rounded focus:outline-none transition">
+                    </div>
+                </div>
+                
+                <div>
+                    <textarea placeholder="Message" rows="6" required class="w-full bg-[#6e82d00a] text-gray-700 placeholder-gray-500 border-b-[3px] border-gray-300 focus:border-brand-blue px-5 py-4 rounded focus:outline-none transition resize-none"></textarea>
+                </div>
+                
+                <div class="pt-4 text-left">
+                    <button type="submit" class="bg-brand-blue text-white font-bold uppercase text-sm tracking-[5px] hover:tracking-[8px] transition-all duration-300 px-10 py-4 rounded shadow-btn">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t-[6px] border-brand-blue mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6">How It Works</h3>
+                    <p class="text-sm leading-relaxed mb-4">NovaDigital is an independent brand providing genuine antivirus and digital protection solutions along with performance-focused digital services. All trademarks and product names referenced on this website are the property of their respective owners and are used for identification purposes only.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6">Our Policies</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="hover:text-white transition flex items-center"><i class="fas fa-shield-alt w-6"></i> Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center"><i class="fas fa-undo-alt w-6"></i> Refund Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center"><i class="fas fa-file-contract w-6"></i> Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center"><i class="fas fa-exclamation-circle w-6"></i> Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="contact.html" class="hover:text-white transition flex items-center"><i class="fas fa-envelope w-6"></i> Contact Us</a></li>
+                        <li><a href="index.html#faq" class="hover:text-white transition flex items-center"><i class="fas fa-question-circle w-6"></i> FAQ's</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center"><i class="fas fa-sitemap w-6"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-xl font-bold uppercase mb-6">Contact</h3>
+                    <ul class="space-y-4">
+                        <li><a href="tel:+18889734608" class="hover:text-white transition flex items-center"><i class="fas fa-phone-alt w-6"></i> +1(888) 973-4608</a></li>
+                        <li><a href="mailto:info@novadigital.com" class="hover:text-white transition flex items-center"><i class="fas fa-paper-plane w-6"></i> info@novadigital.com</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>Copyright &copy; 2026 by novadigital.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
